@@ -412,6 +412,15 @@ img {
   fill: #F4F4FD;
 }
 
+.footer .social-list {
+  gap: 16px;
+}
+
+.footer .social-link:focus,
+.footer .social-link:hover {
+  background-color: #31d0aa;
+}
+
 .footer-wrap {
   display: flex;
   align-items: baseline;
