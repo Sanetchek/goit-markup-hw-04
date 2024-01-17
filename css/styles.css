@@ -413,6 +413,7 @@ img {
 }
 
 .footer .social-list {
+  margin-top: 0;
   gap: 16px;
 }
 
