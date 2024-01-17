@@ -165,6 +165,18 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  position: relative;
+}
+
+.main-menu-item.current::after {
+  content: '';
+  display: block;
+  background-color: #404BBF;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .header-address {
@@ -178,10 +190,6 @@ img {
   color: #434455;
 }
 
-.banner {
-  background-color: #2E2F42;
-}
-
 .main-title {
   text-align: center;
   color: #ffffff;
@@ -190,10 +198,24 @@ img {
 }
 
 .banner {
+  background: #2E2F42 url('../images/people-office.jpg') no-repeat center / cover;
   padding: 188px 0;
+  position: relative;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-color: rgba(46, 47, 66, 0.70);
 }
 
 .banner-wrap {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,6 +302,17 @@ img {
   width: calc((100% - 72px) / 4);
 }
 
+.feature-item-image {
+  display: flex;
+  border-radius: 4px;
+  height: 112px;
+  border: 1px solid #8E8F99;
+  background: #F4F4FD;
+  margin-bottom: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
 .team-list-item {
   width: calc((100% - 72px) / 4);
 }
@@ -291,6 +324,14 @@ img {
 .portfolio-item-content {
   padding: 32px 16px;
   border: 1px solid #E7E9FC;
+  border-top: none;
+  cursor: pointer;
+}
+
+.portfolio-item-content:hover {
+  border: 1px solid #F4F4FD;
+  background: #FFF;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   border-top: none;
 }
 
@@ -304,4 +345,46 @@ img {
 
 .section-paragraph {
   margin: 0;
+}
+
+.social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4D5AE5;
+}
+
+.social-link:hover {
+  background-color: #31D0AA;
+}
+
+.social-link svg {
+  fill: #F4F4FD;
+}
+
+.footer-wrap {
+  display: flex;
+  gap: 120px;
+}
+
+.footer-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  margin: 0 0 16px;
 }
